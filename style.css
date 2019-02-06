@@ -1,0 +1,80 @@
+body{
+    margin:0;
+}
+
+#main{
+    display:grid;
+    grid-template-areas: 'a a a'
+                         'b b c'
+                         'd . c'
+                         'e e e';
+    grid-auto-rows: 15vh 30vh 30vh 25vh;
+    /*grid-gap: 10px;*/
+}
+
+header{
+    grid-area: a;
+    background-color: blue;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+header a {
+    color:white;
+    font-size: 15pt;
+    text-decoration: none;
+    font-family: comic sans ms;
+
+}
+
+header a:nth-child(4){
+    color:black;
+}
+
+header a:hover{
+    font-size: 20pt;
+    transition-duration: 1s;
+    font-weight: bolder;
+
+}
+
+
+
+nav{
+    grid-area: b;
+   /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section{
+    grid-area: d;
+   /* background-color: yellow; */
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+section img{
+    width: 100px;
+    height: 100px;
+
+
+}
+
+aside {
+    grid-area:c;
+    background-color: yellowgreen;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    font-family: comic sans ms;
+    font-size: 15pt;
+}
+
+footer{
+grid-area: e;
+background-color: pink;
+}
